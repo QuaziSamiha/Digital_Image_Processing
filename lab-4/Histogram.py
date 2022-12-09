@@ -17,7 +17,15 @@ while k < 256:
     k=k+1
 
 intensity = np.arange(0, 256, 1)
-# print(intensity)
+# Returns an array with evenly spaced elements as per the interval. 
+# Parameters : 
+# start : [optional] start of interval range. By default start = 0
+# stop  : end of interval range
+# step  : [optional] step size of interval. By default step size = 1,  
+# For any output out, this is the distance between two adjacent values, out[i+1] - out[i]. 
+# dtype : type of output array
+
+print(intensity)
 # print(H)
 plt.bar(intensity, H, color='maroon', width=0.5)
 plt.xlabel('intensity')
