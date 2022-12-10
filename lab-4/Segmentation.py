@@ -1,12 +1,12 @@
-import cv2
+import cv2 as cv
+# 1. Calculate the histogram of an image then find out the threshold to segment the image.
+# segmentation usign binary threshold
+img = cv.imread('images/th.JPEG', 0)
 
-img = cv2.imread('images/dog.jpg')
+_, th1 = cv.threshold(img, 50, 255, cv.THRESH_BINARY)
 
-print('original shape : ', img.shape)
-
-resized_img = cv2.resize(img, (350, 200))
-
-cv2.imshow("original image", img)
-cv2.waitKey(0)
-cv2.imshow('resized image', resized_img)
-cv2.waitKey(0)
+cv.imshow('img', img)
+cv.waitKey(0)
+cv.imshow('th1', th1)
+cv.waitKey(0)
+cv.destroyAllWindows()
